@@ -40,6 +40,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Card.cs" />
+    <Compile Include="CardRank.cs" />
     <Compile Include="CardSuite.cs" />
     <Compile Include="Deck.cs" />
     <Compile Include="Game.cs" />

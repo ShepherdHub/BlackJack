@@ -17,20 +17,58 @@ namespace BlackJackEngineTester
         {
             Assert.AreEqual(CardSuite.CLUBS, aceOfClubs.Suite);
         }
+
         [TestMethod]
         public void createADiamond()
         {
             Assert.AreEqual(CardSuite.DIAMONDS, aceOfDiamonds.Suite);
         }
+
         [TestMethod]
         public void createAHeart()
         {
             Assert.AreEqual(CardSuite.HEARTS, aceOfHearts.Suite);
         }
+
         [TestMethod]
         public void createASpade()
         {
             Assert.AreEqual(CardSuite.SPADES, aceOfSpades.Suite);
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(InvalidCardException))]
+        public void cardValueAbove51ThrowsException()
+        {
+            Card card = new Card(52);
+        }
+
+        [TestMethod]
+        [ExpectedException(typeof(InvalidCardException))]
+        public void cardValueBelow0ThrowsException()
+        {
+            Card card = new Card(-1);
+        }
+
+        [TestMethod]
+        public void twoOfClubsHasRankOfTwo()
+        {
+            Card twoOfClubs = new Card(1);
+            CardRank rank = twoOfClubs.Rank;
+            Assert.AreEqual(CardRank.TWO, rank);
+        }
+
+        [TestMethod]
+        public void cardStartsFaceUp()
+        {
+            Assert.IsTrue(aceOfClubs.isFaceUp());
+        }
+
+        [TestMethod]
+        public void flipCardFaceDown()
+        {
+            aceOfClubs.flipCard();
+            Assert.IsFalse(aceOfClubs.isFaceUp());
         }
     }
 }
