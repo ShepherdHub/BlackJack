@@ -8,6 +8,7 @@ namespace BlackJackEngine
 {
     public class Card
     {
+        // Is this a type?  CardSuit perhaps?
         public CardSuite Suite { get; private set; }
         public CardRank Rank { get; private set; }
         private bool FaceUp { get; set; }
