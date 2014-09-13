@@ -4,7 +4,7 @@ BlackJackEngine
 Goals
 -----
 
-This is a learning project. I will be focusing on learning concepts like error handling, dependency management through separating the business layer from the presentation layer, TDD, and the C## language.
+This is a learning project. I will be focusing on practicing the following concepts: OOP, error handling, dependency management, maintaining separation of domain logic and presentation logic, TDD, and the C# language.
 
 
 Current Rules
