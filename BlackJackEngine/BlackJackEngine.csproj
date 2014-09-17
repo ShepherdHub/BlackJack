@@ -41,7 +41,7 @@
   <ItemGroup>
     <Compile Include="Card\Card.cs" />
     <Compile Include="Card\CardRank.cs" />
-    <Compile Include="Card\CardSuite.cs" />
+    <Compile Include="Card\CardSuit.cs" />
     <Compile Include="Deck\Deck.cs" />
     <Compile Include="Game.cs" />
     <Compile Include="Player.cs" />

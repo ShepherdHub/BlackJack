@@ -8,8 +8,7 @@ namespace BlackJackEngine
 {
     public class Card
     {
-        // Is this a type?  CardSuit perhaps?
-        public CardSuite Suite { get; private set; }
+        public CardSuit Suit { get; private set; }
         public CardRank Rank { get; private set; }
         private bool FaceUp { get; set; }
 
@@ -21,7 +20,7 @@ namespace BlackJackEngine
             }
             else
             {
-                setSuite(num);
+                setSuit(num);
                 setRank(num);
                 FaceUp = true;
             }
@@ -40,7 +39,7 @@ namespace BlackJackEngine
 
         public override string ToString()
         {
-            return String.Format("{0} of {1}",Rank, Suite);
+            return String.Format("{0} of {1}",Rank, Suit);
         }
 
         public override bool Equals(object obj)
@@ -54,16 +53,16 @@ namespace BlackJackEngine
 
         private bool isCardEqual(Card card)
         {
-            if (isSameRankAndSuite(card))
+            if (isSameRankAndSuit(card))
             {
                 return true;
             }
             return false;
         }
 
-        private bool isSameRankAndSuite(Card card)
+        private bool isSameRankAndSuit(Card card)
         {
-            return (this.Rank == card.Rank && this.Suite == card.Suite);
+            return (this.Rank == card.Rank && this.Suit == card.Suit);
         }
 
         private bool isOutOfBounds(int num)
@@ -72,22 +71,22 @@ namespace BlackJackEngine
             return false;
         }
 
-        private void setSuite(int num)
+        private void setSuit(int num)
         {
             int suiteNum = num / 13;
             switch (suiteNum)
             {
                 case 0:
-                    Suite = CardSuite.CLUBS;
+                    Suit = CardSuit.CLUBS;
                     break;
                 case 1:
-                    Suite = CardSuite.DIAMONDS;
+                    Suit = CardSuit.DIAMONDS;
                     break;
                 case 2:
-                    Suite = CardSuite.HEARTS;
+                    Suit = CardSuit.HEARTS;
                     break;
                 case 3:
-                    Suite = CardSuite.SPADES;
+                    Suit = CardSuit.SPADES;
                     break;
                 default:
                     throw new InvalidCardException();

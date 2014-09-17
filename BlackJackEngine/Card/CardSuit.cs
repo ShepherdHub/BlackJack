@@ -1,6 +1,6 @@
 ﻿namespace BlackJackEngine
 {
-    public enum CardSuite
+    public enum CardSuit
     {
         CLUBS,
         DIAMONDS,

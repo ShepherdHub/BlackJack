@@ -15,25 +15,25 @@ namespace BlackJackEngineTester
         [TestMethod]
         public void createAClub()
         {
-            Assert.AreEqual(CardSuite.CLUBS, aceOfClubs.Suite);
+            Assert.AreEqual(CardSuit.CLUBS, aceOfClubs.Suit);
         }
 
         [TestMethod]
         public void createADiamond()
         {
-            Assert.AreEqual(CardSuite.DIAMONDS, aceOfDiamonds.Suite);
+            Assert.AreEqual(CardSuit.DIAMONDS, aceOfDiamonds.Suit);
         }
 
         [TestMethod]
         public void createAHeart()
         {
-            Assert.AreEqual(CardSuite.HEARTS, aceOfHearts.Suite);
+            Assert.AreEqual(CardSuit.HEARTS, aceOfHearts.Suit);
         }
 
         [TestMethod]
         public void createASpade()
         {
-            Assert.AreEqual(CardSuite.SPADES, aceOfSpades.Suite);
+            Assert.AreEqual(CardSuit.SPADES, aceOfSpades.Suit);
         }
 
         [TestMethod]
