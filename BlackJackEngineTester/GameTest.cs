@@ -17,13 +17,6 @@ namespace BlackJackEngineTester
         }
 
         [TestMethod]
-        public void playingCardDeckHas52Cards()
-        {
-            Deck deck = new PlayingCardDeck();
-            Assert.AreEqual(deck.Count, 52);
-        }
-
-        [TestMethod]
         public void createDealerName()
         {
             String actual = game.Dealer.Name;

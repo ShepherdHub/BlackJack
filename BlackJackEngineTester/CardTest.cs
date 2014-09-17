@@ -70,5 +70,13 @@ namespace BlackJackEngineTester
             aceOfClubs.flipCard();
             Assert.IsFalse(aceOfClubs.isFaceUp());
         }
+
+        [TestMethod]
+        public void cardsCanBeEqual()
+        {
+            Card a = new Card(5);
+            Card b = new Card(5);
+            Assert.IsTrue(a.Equals(b));
+        }
     }
 }

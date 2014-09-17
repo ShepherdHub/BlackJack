@@ -37,6 +37,34 @@ namespace BlackJackEngine
             FaceUp = !FaceUp;
         }
 
+        public override string ToString()
+        {
+            return String.Format("{0} of {1}",Rank, Suite);
+        }
+
+        public override bool Equals(object obj)
+        {
+            if(obj is Card)
+            {
+                return isCardEqual((Card)obj);
+            }
+            return false;
+        }
+
+        private bool isCardEqual(Card card)
+        {
+            if (isSameRankAndSuite(card))
+            {
+                return true;
+            }
+            return false;
+        }
+
+        private bool isSameRankAndSuite(Card card)
+        {
+            return (this.Rank == card.Rank && this.Suite == card.Suite);
+        }
+
         private bool isOutOfBounds(int num)
         {
             if (num < 0 || num > 51) return true;
@@ -74,7 +102,12 @@ namespace BlackJackEngine
 
         
     }
-    public class InvalidCardException : Exception { }
+    public class InvalidCardException : Exception 
+    {
+        public InvalidCardException() : base() { }
+        public InvalidCardException(string message) : base(message) { }
+        public InvalidCardException(string message, Exception inner) : base(message, inner) { }
+    }
 
 
 }
